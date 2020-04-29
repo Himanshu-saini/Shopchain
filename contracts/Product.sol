@@ -42,7 +42,7 @@ contract AddProduct {
         }
         Desc _details = new Desc(_company,_desc);
 
-        productList[productCount] = Product(productCount, _name, _price, _count, _category,, _details, msg.sender, _active);
+        productList[productCount] = Product(productCount, _name, _price, _count, _category, _details, msg.sender, _active);
         // Trigger an event
         emit ProductCreated(productCount, _name, _price, _count, _category, _rating, _details, msg.sender, _active);
     }
@@ -53,7 +53,6 @@ contract AddProduct {
         require(productList[id].seller == msg.sender,"Only seller can update price");
         productList[id].price = _price;
     }
-    
     function changeCount(uint _id,uint _count) public{
         require(productList[id].id>0,"Product does not exist");
         require(productList[id].seller == msg.sender,"Only seller can update price");
@@ -66,12 +65,19 @@ contract AddProduct {
         }
     }
 
-    function decreaceCount(uint _id,uint _count) public{
+    function decreaseCount(uint _id,uint _decCount) public{
         require(productList[id].id > 0,"Product does not exist");
-        require(productList[id].count > _count,"Count is too large");
-        productList[id].count -= _count;
-        if (productList[id].count == 0){
+        require(productList[id].count > _decCount,"Count is too large");
+        productList[id].count -= _decCount;
+        if (productList[id].count <= 0){
             productList[id].active = false;
+        }
+    }
+    function increaseCount(uint _id,uint _incCount) public{
+        require(productList[id].id > 0,"Product does not exist");
+        productList[id].count += _incCount;
+        if (productList[id].count > 0){
+            productList[id].active = true;
         }
     }
 }
