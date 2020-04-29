@@ -1,0 +1,23 @@
+{
+  "name": "shopchain",
+  "version": "1.0.0",
+  "description": "A shopping platform using blockchain",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "truffle": "^5.1.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Blockchain",
+    "Shopping"
+  ],
+  "author": "HImanshu",
+  "license": "ISC"
+}
