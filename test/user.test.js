@@ -22,7 +22,7 @@ contract('User', (account) => {
   })
 
   describe('user', async () => {
-    let user
+    let result
 
     before(async () => {
       result = await user.createUser('Himanshu', '111,Sector 11,Gurgaon','9899880773','himanshu@gmail.com','buyer')
@@ -36,7 +36,7 @@ contract('User', (account) => {
       assert.equal(event.location, '111,Sector 11,Gurgaon', 'location is correct')
       assert.equal(event.phone, '9899880773', 'phone number is correct')
       assert.equal(event.email, 'himanshu@gmail.com', 'email is correct')
-      assert.equal(event.type, 'buyer', 'Account type is correct')
+      assert.equal(event.accountType, 'buyer', 'Account Type is correct')
 
       // FAILURE
       await await user.createProduct('', '111,Sector 11,Gurgaon','9899880773','himanshu@gmail.com','buyer').should.be.rejected;
@@ -53,7 +53,7 @@ contract('User', (account) => {
       assert.equal(person.location, '111,Sector 11,Gurgaon', 'location is correct')
       assert.equal(person.phone, '9899880773', 'phone number is correct')
       assert.equal(person.email, 'himanshu@gmail.com', 'email is correct')
-      assert.equal(person.type, 'buyer', 'Account Type is correct')
+      assert.equal(person.accountType, 'buyer', 'Account Type is correct')
     })
   })
 })

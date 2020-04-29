@@ -1,17 +1,17 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 
-contract User{
+contract AddUser{
 
-    struct Person{
+    struct User{
         string name;
         address payable account;
         string location;
         string phone;
         string email;
-        string type;
+        string accountType;
     }
 
-    mapping(address => Person) public userAccount;
+    mapping(address => User) public userAccount;
 
     event accountCreated{
         string name;
@@ -19,7 +19,7 @@ contract User{
         string location;
         string phone;
         string email;
-        string type;
+        string accountType;
     }
     
     function createUser(string _name, string _location, string _phone, string _email,string _type) public {
@@ -29,7 +29,7 @@ contract User{
         require(bytes(_email).length > 0);
         require(_type = "buyer" || _type = "seller");
 
-        userAccount[msg.sender] = Person(_name,msg.sender,_location,_phone,_email,_type)
+        userAccount[msg.sender] = User(_name,msg.sender,_location,_phone,_email, _type)
 
         emit accountCreated(_name,msg.sender,_location,_phone,_email,_type)
     }
