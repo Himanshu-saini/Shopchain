@@ -7,8 +7,11 @@
     "test": "test"
   },
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "solidity": "0.0.1",
-    "truffle": "^5.1.23"
+    "truffle": "^5.1.23",
+    "web3": "^1.2.7"
   },
   "devDependencies": {},
   "scripts": {

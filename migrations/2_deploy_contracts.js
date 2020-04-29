@@ -1,6 +1,6 @@
-const Product = artifacts.require("Product");
-const User = artifacts.require("User");
-// const Shopping = artifacts.require("Shooping");
+const User = artifacts.require("AddUser");
+const Product = artifacts.require("AddProduct");
+// const Shopping = artifacts.require("Shopping");
 
 module.exports = function(deployer) {
     deployer.deploy(User);

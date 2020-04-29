@@ -1,10 +1,10 @@
-const User = artifacts.require('./User.sol')
+const User = artifacts.require('./AddUser.sol')
 
 require('chai')
   .use(require('chai-as-promised'))
   .should()
 
-contract('User', (account) => {
+contract('User', ([account]) => {
   let user
 
   before(async () => {
@@ -39,11 +39,10 @@ contract('User', (account) => {
       assert.equal(event.accountType, 'buyer', 'Account Type is correct')
 
       // FAILURE
-      await await user.createProduct('', '111,Sector 11,Gurgaon','9899880773','himanshu@gmail.com','buyer').should.be.rejected;
-      await await user.createProduct('Himanshu', '','9899880773','himanshu@gmail.com','buyer').should.be.rejected;
-      await await user.createProduct('Himanshu', '111,Sector 11,Gurgaon','989','himanshu@gmail.com','buyer').should.be.rejected;
-      await await user.createProduct('Himanshu', '111,Sector 11,Gurgaon','9899880773','','buyer').should.be.rejected;
-      await await user.createProduct('Himanshu', '111,Sector 11,Gurgaon','9899880773','himanshu@gmail.com','buy').should.be.rejected;
+      await await user.createUser('', '111,Sector 11,Gurgaon','9899880773','himanshu@gmail.com','buyer').should.be.rejected;
+      await await user.createUser('Himanshu', '','9899880773','himanshu@gmail.com','buyer').should.be.rejected;
+      await await user.createUser('Himanshu', '111,Sector 11,Gurgaon','989','himanshu@gmail.com','buyer').should.be.rejected;
+      await await user.createUser('Himanshu', '111,Sector 11,Gurgaon','9899880773','','buyer').should.be.rejected;
     })
 
     it('Get User', async () => {

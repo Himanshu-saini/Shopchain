@@ -1,0 +1,104 @@
+{
+  "contractName": "Shopping",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/E/Blockchain/Shopchain/contracts/Shopping-contract.sol\":\"Shopping\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/Blockchain/Shopchain/contracts/Shopping-contract.sol\":{\"keccak256\":\"0x0dafd208e17dffc4db89f02d015b351ae94b3b5804ec02cd0166968d7195e7ff\",\"urls\":[\"bzz-raw://a123beb87497b1a22f4b778c00982d7d03f2e2e22a04f1b1e21cd46a795c1a3e\",\"dweb:/ipfs/QmWYsyTVYQip6stFZWaQZQ9nauyv2GRKN9H8VbF9Awv9mD\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582053f03dcb4e73e62b84d9586ca1bc0c59bb338a6fdb17c4692ef0b0f30939149064736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582053f03dcb4e73e62b84d9586ca1bc0c59bb338a6fdb17c4692ef0b0f30939149064736f6c63430005100032",
+  "sourceMap": "54:1182:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;54:1182:3;;;;;;;",
+  "deployedSourceMap": "54:1182:3:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\r\n\r\n// import './User.sol';\r\n\r\ncontract Shopping {\r\n\r\n    // function purchaseProduct(uint _id) public payable {\r\n    //     // Fetch the product\r\n    //     Product memory _product = products[_id];\r\n    //     // Fetch the owner\r\n    //     address payable _seller = _product.owner;\r\n    //     // Make sure the product has a valid id\r\n    //     require(_product.id > 0 && _product.id <= productCount);\r\n    //     // Require that there is enough Ether in the transaction\r\n    //     require(msg.value >= _product.price);\r\n    //     // Require that the product has not been purchased already\r\n    //     require(!_product.purchased);\r\n    //     // Require that the buyer is not the seller\r\n    //     require(_seller != msg.sender);\r\n    //     // Transfer ownership to the buyer\r\n    //     _product.owner = msg.sender;\r\n    //     // Mark as purchased\r\n    //     _product.purchased = true;\r\n    //     // Update the product\r\n    //     products[_id] = _product;\r\n    //     // Pay the seller by sending them Ether\r\n    //     address(_seller).transfer(msg.value);\r\n    //     // Trigger an event\r\n    //     emit ProductPurchased(productCount, _product.name, _product.price, msg.sender, true);\r\n    // }\r\n}\r\n",
+  "sourcePath": "E:\\Blockchain\\Shopchain\\contracts\\Shopping-contract.sol",
+  "ast": {
+    "absolutePath": "/E/Blockchain/Shopchain/contracts/Shopping-contract.sol",
+    "exportedSymbols": {
+      "Shopping": [
+        476
+      ]
+    },
+    "id": 477,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 475,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 476,
+        "linearizedBaseContracts": [
+          476
+        ],
+        "name": "Shopping",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 477,
+        "src": "54:1182:3"
+      }
+    ],
+    "src": "0:1238:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/Blockchain/Shopchain/contracts/Shopping-contract.sol",
+    "exportedSymbols": {
+      "Shopping": [
+        476
+      ]
+    },
+    "id": 477,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 475,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 476,
+        "linearizedBaseContracts": [
+          476
+        ],
+        "name": "Shopping",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 477,
+        "src": "54:1182:3"
+      }
+    ],
+    "src": "0:1238:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-04-29T11:37:43.011Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
