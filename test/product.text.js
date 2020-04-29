@@ -4,7 +4,7 @@ require('chai')
   .use(require('chai-as-promised'))
   .should()
 
-contract('Product', (account) => {
+contract('Product', ([account,account2]) => {
   let product
 
   before(async () => {
