@@ -121,7 +121,7 @@ contract AddProduct {
     function getProductSeller(uint _productID) public view returns (address payable){
         return productList[_productID].seller;
     }
-    function giveSellerProducts() public view returns (uint[] memory productNum){
+    function getSellerProducts() public view returns (uint[] memory productNum){
         productNum = sellerProducts[msg.sender];
     }
 }
